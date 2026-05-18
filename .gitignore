@@ -1,34 +1,19 @@
 # Python
+venv/
 __pycache__/
 *.pyc
-*.pyo
-*.pyd
 
-# Virtual Environment
-backend/venv/
+# Database
+*.db
 
-# Environment Variables
-backend/.env
-
-# VS Code
-.vscode/
+# Environment
+.env
 
 # macOS
 .DS_Store
 
+# VS Code
+.vscode/
+
 # Logs
 *.log
-
-# SQL Lite
-*.sqlite3
-
-# Node
-node_modules/
-
-# Coverage
-htmlcov/
-.coverage
-
-# Build
-dist/
-build/

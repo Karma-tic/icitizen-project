@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>iCitizen Login</title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="form-box">
+
+            <h1>iCitizen Login</h1>
+
+            <form id="loginForm">
+
+                <div>
+
+                    <label for="login_input">
+                        Email or Mobile Number
+                    </label>
+
+                    <input
+                        type="text"
+                        id="login_input"
+                        autocomplete="username"
+                        required
+                    >
+
+                </div>
+
+                <div>
+
+                    <label for="password">
+                        Password
+                    </label>
+
+                    <input
+                        type="password"
+                        id="password"
+                        autocomplete="current-password"
+                        required
+                    >
+
+                </div>
+
+                <div class="captcha-box">
+
+                    <span id="captchaText"></span>
+
+                    <button
+                        type="button"
+                        id="refreshCaptcha"
+                    >
+                        Refresh
+                    </button>
+
+                </div>
+
+                <div>
+
+                    <label for="captchaInput">
+                        Enter Captcha
+                    </label>
+
+                    <input
+                        type="text"
+                        id="captchaInput"
+                        autocomplete="off"
+                        required
+                    >
+
+                </div>
+
+                <button type="submit">
+                    Login
+                </button>
+
+            </form>
+
+            <div id="message"></div>
+
+            <p
+                style="
+                    margin-top:20px;
+                    text-align:center;
+                "
+            >
+                New User?
+
+                <a href="signup.html">
+                    Signup Here
+                </a>
+
+            </p>
+
+        </div>
+
+    </div>
+
+    <script src="js/login.js"></script>
+
+</body>
+
+</html>

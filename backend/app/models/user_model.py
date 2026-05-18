@@ -1,23 +1,46 @@
-from sqlalchemy import Column, Integer, String, Boolean, DateTime
-from app.database import Base
+from sqlalchemy import Column
+from sqlalchemy import Integer
+from sqlalchemy import String
+from sqlalchemy import Date
+from sqlalchemy import Boolean
+from sqlalchemy import DateTime
+
 from datetime import datetime
+
+from app.database import Base
 
 
 class User(Base):
-    __tablename__ = "LoginMaster"
 
-    id = Column(Integer, primary_key=True, index=True)
-    first_name = Column(String(100), nullable=False)
-    middle_name = Column(String(100), nullable=True)
-    last_name = Column(String(100), nullable=False)
+    __tablename__ = "users"
 
-    gender = Column(String(20), nullable=False)
+    id = Column(Integer, primary_key=True)
 
-    email = Column(String(150), unique=True, nullable=False)
-    mobile_number = Column(String(10), unique=True, nullable=False)
+    first_name = Column(String)
 
-    password_hash = Column(String(500), nullable=False)
+    middle_name = Column(String)
 
-    is_verified = Column(Boolean, default=False)
+    last_name = Column(String)
 
-    created_at = Column(DateTime, default=datetime.utcnow)
+    gender = Column(String)
+
+    dob = Column(Date)
+
+    email = Column(String, unique=True)
+
+    mobile_number = Column(
+        String,
+        unique=True
+    )
+
+    password_hash = Column(String)
+
+    is_verified = Column(
+        Boolean,
+        default=False
+    )
+
+    created_at = Column(
+        DateTime,
+        default=datetime.utcnow
+    )

@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>iCitizen Signup</title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="form-box">
+
+            <h1>iCitizen Signup</h1>
+
+            <form id="signupForm">
+
+                <div class="grid">
+
+                    <!-- First Name -->
+                    <div>
+
+                        <label for="first_name">
+                            First Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="first_name"
+                            autocomplete="given-name"
+                            required
+                        >
+
+                    </div>
+
+                    <!-- Middle Name -->
+                    <div>
+
+                        <label for="middle_name">
+                            Middle Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="middle_name"
+                            autocomplete="additional-name"
+                        >
+
+                    </div>
+
+                    <!-- Last Name -->
+                    <div>
+
+                        <label for="last_name">
+                            Last Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="last_name"
+                            autocomplete="family-name"
+                            required
+                        >
+
+                    </div>
+
+                    <!-- Gender -->
+                    <div>
+
+                        <label for="gender">
+                            Gender
+                        </label>
+
+                        <select
+                            id="gender"
+                            required
+                        >
+
+                            <option value="">
+                                Select
+                            </option>
+
+                            <option value="Male">
+                                Male
+                            </option>
+
+                            <option value="Female">
+                                Female
+                            </option>
+
+                            <option value="Other">
+                                Other
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                    <!-- DOB -->
+                    <div>
+
+                        <label for="dob">
+                            Date of Birth
+                        </label>
+
+                        <input
+                            type="date"
+                            id="dob"
+                            required
+                        >
+
+                    </div>
+
+                    <!-- Age -->
+                    <div>
+
+                        <label for="age">
+                            Age
+                        </label>
+
+                        <input
+                            type="number"
+                            id="age"
+                            readonly
+                        >
+
+                    </div>
+
+                    <!-- Email -->
+                    <div>
+
+                        <label for="email">
+                            Email
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            autocomplete="email"
+                            required
+                        >
+
+                    </div>
+
+                    <!-- Mobile -->
+                    <div>
+
+                        <label for="mobile_number">
+                            Mobile Number
+                        </label>
+
+                        <input
+                            type="text"
+                            id="mobile_number"
+                            autocomplete="tel"
+                            maxlength="10"
+                            required
+                        >
+
+                    </div>
+
+                    <!-- Password -->
+                    <div>
+
+                        <label for="password">
+                            Password
+                        </label>
+
+                        <input
+                            type="password"
+                            id="password"
+                            autocomplete="new-password"
+                            required
+                        >
+
+                    </div>
+
+                    <!-- Confirm Password -->
+                    <div>
+
+                        <label for="confirm_password">
+                            Confirm Password
+                        </label>
+
+                        <input
+                            type="password"
+                            id="confirm_password"
+                            autocomplete="new-password"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+                <!-- Captcha -->
+                <div class="captcha-box">
+
+                    <span id="captchaText"></span>
+
+                    <button
+                        type="button"
+                        id="refreshCaptcha"
+                    >
+                        Refresh
+                    </button>
+
+                </div>
+
+                <div>
+
+                    <label for="captchaInput">
+                        Enter Captcha
+                    </label>
+
+                    <input
+                        type="text"
+                        id="captchaInput"
+                        autocomplete="off"
+                        placeholder="Enter Captcha"
+                        required
+                    >
+
+                </div>
+
+                <!-- OTP -->
+                <div class="otp-section">
+
+                    <button
+                        type="button"
+                        id="generateOtpBtn"
+                    >
+                        Generate OTP
+                    </button>
+
+                    <div id="otpDisplay"></div>
+
+                    <div id="timer"></div>
+
+                </div>
+
+                <div>
+
+                    <label for="otpInput">
+                        Enter OTP
+                    </label>
+
+                    <input
+                        type="text"
+                        id="otpInput"
+                        autocomplete="one-time-code"
+                        placeholder="Enter OTP"
+                        required
+                    >
+
+                </div>
+
+                <!-- Submit -->
+                <button type="submit">
+                    Signup
+                </button>
+
+            </form>
+
+            <div id="message"></div>
+
+        </div>
+
+    </div>
+
+    <script src="js/signup.js"></script>
+
+</body>
+
+</html>
