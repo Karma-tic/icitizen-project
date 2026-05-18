@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual Environment
+backend/venv/
+
+# Environment Variables
+backend/.env
+
+# VS Code
+.vscode/
+
+# macOS
+.DS_Store
+
+# Logs
+*.log
+
+# SQL Lite
+*.sqlite3
+
+# Node
+node_modules/
+
+# Coverage
+htmlcov/
+.coverage
+
+# Build
+dist/
+build/
